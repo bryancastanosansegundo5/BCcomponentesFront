@@ -1,0 +1,7 @@
+Son pantallas completas que representan las rutas:
+
+/login, /carrito, /productos, /perfil, etc.
+
+Dentro puedes usar components, layouts y todo lo que necesites.
+
+En una SPA, cada ruta de React (por ejemplo con react-router-dom) apunta a una de estas páginas.

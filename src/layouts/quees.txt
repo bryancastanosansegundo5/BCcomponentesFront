@@ -1,0 +1,5 @@
+Define estructuras comunes para las páginas.
+
+Por ejemplo, un MainLayout que tenga cabecera, menú, pie de página y un <Outlet /> para mostrar lo que cambia.
+
+Sirve para no repetir código común en cada página.

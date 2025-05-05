@@ -1,0 +1,7 @@
+Aquí defines contextos globales, por ejemplo:
+
+Autenticación (saber si el usuario está logado)
+
+Carrito de compra (productos añadidos)
+
+Se usan con React Context API para compartir datos entre componentes sin pasar props.

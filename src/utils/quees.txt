@@ -1,0 +1,3 @@
+Funciones auxiliares que no son React, por ejemplo:
+
+Validar emails, calcular totales, formatear fechas.

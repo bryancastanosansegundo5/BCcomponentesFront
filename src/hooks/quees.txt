@@ -1,0 +1,3 @@
+Aquí pones tus custom hooks, o sea, funciones que agrupan lógica reutilizable con useState, useEffect, etc.
+
+Ejemplo: useForm(), useCarrito(), useAuth().
