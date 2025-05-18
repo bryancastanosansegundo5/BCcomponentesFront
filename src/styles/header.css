@@ -1,0 +1,266 @@
+/* ------------------------------------- */
+/* Estilos base del header (desktop)    */
+/* ------------------------------------- */
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.header-contenedor {
+  height: 5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  height: 55px;
+  margin-right: 10px;
+}
+
+.categorias-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 500;
+}
+
+.link-animado {
+  position: relative;
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.link-animado:hover {
+  color: #ff5c00;
+  transform: scale(1.04);
+}
+
+.link-animado::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff5c00;
+  transition: width 0.3s ease;
+}
+
+.link-animado:hover::after {
+  width: 100%;
+}
+
+.barra-busqueda {
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+.barra-busqueda:focus-within {
+  box-shadow: 0 0 0 2px #ff5c00;
+}
+
+.barra-busqueda select {
+  max-width: 200px;
+  min-width: 0;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+}
+
+.barra-busqueda input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 0 10px;
+  min-width: 0;
+  width: 0;
+}
+
+.boton-buscar {
+  border: none;
+  background-color: transparent;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-input-group select,
+.neon-input-group input {
+  background-color: white;
+  box-shadow: 0 0 6px rgba(255, 92, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-input-group input:focus,
+.neon-input-group select:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff5c00, 0 0 20px rgba(255, 92, 0, 0.5);
+}
+
+/* Estilo base del botón hamburguesa (oculto por defecto) */
+.toggle-menu {
+  font-size: 1.4rem;
+  border: none;
+  background: none;
+  color: #000;
+  margin-left: auto;
+  display: none;
+}
+
+.menu-principal {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.categorias-contenedor {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+/* ------------------------------------- */
+/* Responsive: ≤ 992px (tablets)         */
+/* ------------------------------------- */
+@media (max-width: 992px) {
+  .header-contenedor {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .header-contenedor > div:nth-child(1),
+  .header-contenedor > div:nth-child(2),
+  .header-contenedor > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-logo {
+    height: 45px;
+    flex-shrink: 0;
+  }
+
+  .categorias-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .barra-busqueda {
+    flex: 1;
+    min-width: 20px;
+    max-width: 60vw;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
+
+  .barra-busqueda select {
+    display: none;
+  }
+
+  .barra-busqueda input {
+    flex: 1;
+    border: none;
+    outline: none;
+    min-width: 0;
+  }
+
+  .boton-buscar {
+    padding: 0 8px;
+  }
+
+  nav {
+    flex: 1 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* ------------------------------------- */
+/* Responsive: ≤ 768px (móviles)         */
+/* ------------------------------------- */
+@media (max-width: 768px) {
+  .toggle-menu {
+    display: block;
+  }
+
+  .menu-principal {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .menu-principal.mostrar {
+    display: flex;
+  }
+
+  .categorias-btn {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+  }
+
+  .categorias-contenedor {
+    justify-content: center;
+    padding: 0 !important;
+  }
+}
+
+/* ------------------------------------- */
+/* Responsive: ≤ 576px (extra pequeños) */
+/* ------------------------------------- */
+@media (max-width: 576px) {
+  .header-contenedor {
+    gap: 5px;
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  .barra-busqueda {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .barra-busqueda input {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .boton-buscar {
+    padding: 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.95rem;
+    padding-bottom: 10px;
+  }
+
+  .categorias-btn {
+    font-size: 0.95rem;
+  }
+}
